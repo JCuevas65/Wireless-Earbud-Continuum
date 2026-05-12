@@ -39,7 +39,6 @@ export default function Footer() {
           <div className="space-y-6">
             <h4 className="font-bold uppercase tracking-widest text-xs">Company</h4>
             <div className="flex flex-col gap-4 text-white/40">
-                <Link to="/#press" className="hover:text-white transition-colors">Press</Link>
                 <Link to="/philosophy" className="hover:text-white transition-colors">Philosophy</Link>
                 <Link to="/sustainability" className="hover:text-white transition-colors">Sustainability</Link>
             </div>

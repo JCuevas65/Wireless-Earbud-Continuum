@@ -85,55 +85,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Press Section */}
-      <section id="press" className="py-20 bg-black border-y border-white/5 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
-           <motion.div
-             initial={{ opacity: 0, y: 10 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             className="inline-block"
-           >
-              <p className="text-xl md:text-2xl text-white/80 font-light italic leading-relaxed max-w-3xl mx-auto">
-                "The first headphones that actually respect the planet."
-              </p>
-              <p className="mt-4 text-[10px] uppercase tracking-[0.4em] font-bold text-white/20">Wired Magazine</p>
-           </motion.div>
-        </div>
-
-        <div className="relative flex overflow-hidden group">
-          <div className="flex animate-marquee whitespace-nowrap py-4">
-            {[
-              "WIRED", "THE VERGE", "WALLPAPER*", "TECHCRUNCH", "DEZEEN", "GQ",
-              "WIRED", "THE VERGE", "WALLPAPER*", "TECHCRUNCH", "DEZEEN", "GQ"
-            ].map((press, i) => (
-              <div 
-                key={i} 
-                className="mx-12 text-2xl md:text-3xl font-black tracking-tighter text-white/10 hover:text-white transition-all duration-500 cursor-default select-none"
-                style={{ fontFamily: press === "WALLPAPER*" ? "serif" : "inherit" }}
-              >
-                {press}
-              </div>
-            ))}
-          </div>
-          
-          <div className="absolute top-0 flex animate-marquee2 whitespace-nowrap py-4">
-            {[
-              "WIRED", "THE VERGE", "WALLPAPER*", "TECHCRUNCH", "DEZEEN", "GQ",
-              "WIRED", "THE VERGE", "WALLPAPER*", "TECHCRUNCH", "DEZEEN", "GQ"
-            ].map((press, i) => (
-              <div 
-                key={i} 
-                className="mx-12 text-2xl md:text-3xl font-black tracking-tighter text-white/10 hover:text-white transition-all duration-500 cursor-default select-none"
-                style={{ fontFamily: press === "WALLPAPER*" ? "serif" : "inherit" }}
-              >
-                {press}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Features */}
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
