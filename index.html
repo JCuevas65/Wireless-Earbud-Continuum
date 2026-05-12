@@ -131,9 +131,10 @@
       
       <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/70">
         <button onclick="navigateTo('home')" class="hover:text-white transition-colors">Home</button>
-        <button onclick="navigateTo('products')" class="hover:text-white transition-colors">Products</button>
+        <button onclick="navigateTo('products')" class="hover:text-white transition-colors">Shop</button>
         <button onclick="navigateTo('tech')" class="hover:text-white transition-colors">Technology</button>
-        <button onclick="navigateTo('home'); setTimeout(() => document.getElementById('about-us').scrollIntoView({behavior: 'smooth'}), 100)" class="hover:text-white transition-colors">About Us</button>
+        <button onclick="navigateTo('support')" class="hover:text-white transition-colors">Support</button>
+        <button onclick="navigateTo('about')" class="hover:text-white transition-colors">About Us</button>
       </div>
 
       <div class="flex items-center gap-6">
@@ -194,27 +195,138 @@
 
 
 
-          <!-- About Us / Philosophy / Materials -->
-          <section id="about-us" class="py-24 px-6 md:px-12 border-t border-white/5 max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16">
-              <div class="space-y-8">
-                <span class="text-xs font-bold uppercase tracking-[0.3em] text-white/30">About Us</span>
-                <h2 class="text-4xl md:text-6xl font-medium tracking-tight">Our Philosophy.</h2>
-                <p class="text-lg text-white/50 leading-relaxed font-light">
-                  We believe in "Material Honesty"—the idea that products should show their true form and be built to last generations. Our modular architecture allows for the acoustic engine to be upgraded while the titanium housing remains a permanent part of your life.
-                </p>
+          <!-- Hero section remains -->
+          
+          <!-- Featured Products on Home -->
+          <section class="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5 mt-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+              <div class="space-y-4">
+                <span class="text-xs font-bold tracking-widest text-white/40 uppercase">Curated Excellence</span>
+                <h2 class="text-4xl md:text-6xl font-medium tracking-tight">The Core Collection.</h2>
               </div>
-              <div class="glass-card rounded-[40px] p-10 space-y-6 flex flex-col justify-center">
-                <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-white/40">
-                  <i data-lucide="recycle" class="w-6 h-6"></i>
+              <button onclick="navigateTo('products')" class="text-xs font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors flex items-center gap-2 group">
+                View Full Shop <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+              </button>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Origin -->
+              <div class="flex flex-col rounded-[32px] glass-card overflow-hidden group border border-white/5 bg-[#0a0a0a]/50 transition-all transform hover:-translate-y-2">
+                <div class="bg-white/5 aspect-square flex items-center justify-center p-12 relative overflow-hidden">
+                  <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.05)_0%,transparent_60%)]"></div>
+                  <i data-lucide="waves" class="text-white/20 w-16 h-16 relative z-10"></i>
                 </div>
-                <h3 class="text-2xl font-medium">Refurbished Materials</h3>
-                <p class="text-white/40 text-sm leading-relaxed font-light">
-                  Sustainability is core to our DNA. Each Continuum Pro utilizes up to 40% certified refurbished aerospace-grade titanium alloys and 100% recycled polymers, significantly reducing the environmental impact of raw material extraction without compromising on structural integrity.
-                </p>
+                <div class="p-8 space-y-4">
+                  <h3 class="text-2xl font-bold tracking-tight">Origin</h3>
+                  <p class="text-white/50 text-sm leading-relaxed font-light">
+                    The pure distillation of our acoustic philosophy. Precision Grade 5 Titanium housing with high-fidelity Beryllium drivers.
+                  </p>
+                  <button onclick="navigateTo('products')" class="w-full py-4 mt-2 text-[10px] font-bold uppercase border border-white/10 rounded-xl hover:bg-white hover:text-black transition-colors">Learn More</button>
+                </div>
+              </div>
+              
+              <!-- Lab Edition -->
+              <div class="flex flex-col rounded-[32px] glass-card overflow-hidden group border border-white/5 bg-[#0a0a0a]/50 transition-all transform hover:-translate-y-2">
+                <div class="bg-zinc-900 aspect-square flex items-center justify-center p-12 relative overflow-hidden">
+                  <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.05)_0%,transparent_60%)]"></div>
+                  <i data-lucide="cpu" class="text-white/20 w-16 h-16 relative z-10"></i>
+                </div>
+                <div class="p-8 space-y-4">
+                  <h3 class="text-2xl font-bold tracking-tight">Lab Edition</h3>
+                  <p class="text-white/50 text-sm leading-relaxed font-light">
+                    Engineering exposed. A transparent sapphire crystal backplate reveals the Neural Core 2.0 processing architecture.
+                  </p>
+                   <button onclick="navigateTo('products')" class="w-full py-4 mt-2 text-[10px] font-bold uppercase border border-white/10 rounded-xl hover:bg-white hover:text-black transition-colors">Learn More</button>
+                </div>
+              </div>
+
+              <!-- Stealth -->
+              <div class="flex flex-col rounded-[32px] glass-card overflow-hidden group border border-white/5 bg-[#0a0a0a]/50 transition-all transform hover:-translate-y-2">
+                <div class="bg-black aspect-square flex items-center justify-center p-12 relative overflow-hidden">
+                  <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.1)_0%,transparent_60%)]"></div>
+                  <i data-lucide="shield" class="text-white/20 w-16 h-16 relative z-10"></i>
+                </div>
+                <div class="p-8 space-y-4">
+                  <h3 class="text-2xl font-bold tracking-tight">Stealth</h3>
+                  <p class="text-white/50 text-sm leading-relaxed font-light">
+                    Ultimate discretion. Matte-black DLC (Diamond-Like Carbon) coating over a titanium base for maximum durability.
+                  </p>
+                   <button onclick="navigateTo('products')" class="w-full py-4 mt-2 text-[10px] font-bold uppercase border border-white/10 rounded-xl hover:bg-white hover:text-black transition-colors">Learn More</button>
+                </div>
               </div>
             </div>
           </section>
+        </div>
+      </section>
+
+      <!-- ABOUT PAGE -->
+      <section id="about" class="page-section pt-32 pb-24 px-6 md:px-12 min-h-screen">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-16">
+            <div class="space-y-8">
+              <span class="text-xs font-bold uppercase tracking-[0.3em] text-white/30">About Us</span>
+              <h2 class="text-4xl md:text-6xl font-medium tracking-tight">Our Philosophy.</h2>
+              <p class="text-lg text-white/50 leading-relaxed font-light">
+                We believe in "Material Honesty"—the idea that products should show their true form and be built to last generations. Our modular architecture allows for the acoustic engine to be upgraded while the titanium housing remains a permanent part of your life.
+              </p>
+            </div>
+            <div class="glass-card rounded-[40px] p-10 space-y-6 flex flex-col justify-center">
+              <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-white/40">
+                <i data-lucide="recycle" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-2xl font-medium">Refurbished Materials</h3>
+              <p class="text-white/40 text-sm leading-relaxed font-light">
+                Sustainability is core to our DNA. Each Continuum Pro utilizes up to 40% certified refurbished aerospace-grade titanium alloys and 100% recycled polymers, significantly reducing the environmental impact of raw material extraction without compromising on structural integrity.
+              </p>
+            </div>
+          </div>
+
+          <!-- Warranty Section -->
+          <div class="mt-32 pt-24 border-t border-white/5">
+            <div class="grid md:grid-cols-3 gap-12">
+              <div class="md:col-span-1 space-y-6">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-white/30">The Continuum Promise</span>
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight">Lifetime <br/>Warranty.</h2>
+                <p class="text-white/50 text-sm leading-relaxed font-light">
+                  Our products are built for decades, not seasons. Every Continuum Pro is backed by a comprehensive protection plan.
+                </p>
+              </div>
+              
+              <div class="md:col-span-2 grid sm:grid-cols-2 gap-8">
+                <div class="glass-card rounded-[32px] p-8 space-y-4">
+                  <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-white/40">
+                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="font-bold">Life-Housing Guard</h3>
+                  <p class="text-white/40 text-xs leading-relaxed">The Grade 5 Titanium exterior shell is guaranteed for your lifetime. Should the housing ever fail structurally, we replace it at no cost.</p>
+                </div>
+
+                <div class="glass-card rounded-[32px] p-8 space-y-4">
+                  <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-white/40">
+                    <i data-lucide="refresh-ccw" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="font-bold">Modular Support</h3>
+                  <p class="text-white/40 text-xs leading-relaxed">The internal acoustic engine and Neural Core carry a 5-year global warranty, ensuring your hardware remains at peak performance.</p>
+                </div>
+
+                <div class="glass-card rounded-[32px] p-8 space-y-4">
+                  <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-white/40">
+                    <i data-lucide="globe" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="font-bold">Global Service</h3>
+                  <p class="text-white/40 text-xs leading-relaxed">Our certified service centers in 40+ countries offer priority repairs and original part replacements for Continuum owners.</p>
+                </div>
+
+                <div class="glass-card rounded-[32px] p-8 space-y-4">
+                  <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-white/40">
+                    <i data-lucide="award" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="font-bold">Upgrade Path</h3>
+                  <p class="text-white/40 text-xs leading-relaxed">Owners receive exclusive access to new driver modules and processing cores at a 40% loyalty discount when new technology is released.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -312,6 +424,45 @@
             <p class="text-xl text-white/50 font-light leading-relaxed max-w-2xl">
               Indestructibility, repairability, and material honesty.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUPPORT PAGE -->
+      <section id="support" class="page-section pt-32 pb-24 px-6 md:px-12 min-h-screen">
+        <div class="max-w-4xl mx-auto space-y-24">
+          <div class="space-y-8">
+            <span class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">Get in Touch</span>
+            <h1 class="text-5xl md:text-8xl font-medium tracking-tighter leading-[1.1]">
+              Global <br /> Support.
+            </h1>
+            <p class="text-xl text-white/50 font-light leading-relaxed max-w-2xl">
+              We're here to assist you with every detail of your Continuum experience.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+              <div class="glass-card rounded-[40px] p-12 space-y-6">
+                <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-white/40">
+                  <i data-lucide="mail" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-medium">Email Us</h3>
+                <p class="text-white/40 text-sm leading-relaxed font-light">
+                  General Inquiries & Support<br/>
+                  <a href="mailto:support@continuum.audio" class="text-white hover:underline transition-all">support@continuum.audio</a>
+                </p>
+              </div>
+
+              <div class="glass-card rounded-[40px] p-12 space-y-6">
+                <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-white/40">
+                  <i data-lucide="phone" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-medium">Call Us</h3>
+                <p class="text-white/40 text-sm leading-relaxed font-light">
+                  Mon-Fri, 9am - 6pm EST<br/>
+                  <a href="tel:+1800-CONTINUUM" class="text-white hover:underline transition-all">+1 800-CONTINUUM</a>
+                </p>
+              </div>
           </div>
         </div>
       </section>
@@ -586,7 +737,7 @@
         updateCartUI();
         // Check hash for initial page
         const h = window.location.hash.replace('#','');
-        if(['products','tech','philosophy'].includes(h)) navigateTo(h);
+        if(['products','tech','philosophy', 'support', 'about'].includes(h)) navigateTo(h);
       });
     </script>
   </body>
